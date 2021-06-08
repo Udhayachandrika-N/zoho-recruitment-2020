@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    int i,j,k=0,l;
+    char str[101];
+    scanf("%s",str);
+    int x=strlen(str);
+    int mid=x/2;
+    for(i=x;i>0;i--){
+        for(j=0;j<i;j++){
+            if(k+j<=x-2){
+                printf(" ");
+            }
+            for(l=0;l<=k;l++){
+                if(k+j>x-2&&k+j<=x){
+                    if(mid+l>x-1){
+                        printf("%c ",str[(mid+l)-x]);
+                    }
+                    else{
+                        printf("%c ",str[mid+l]);
+                    }
+                }
+            }
+        }   
+        printf("\n");
+            k++;
+    }
+    
+
+    return 0;
+}
